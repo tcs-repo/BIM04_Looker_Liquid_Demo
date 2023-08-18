@@ -10,4 +10,10 @@ explore: looker_incident {
 
 }
 
-explore: liquid_demo_data {}
+explore: liquid_demo_data {
+
+  always_filter: {
+    filters: [liquid_demo_data.UserRole: "{{_user_attributes['first_name']}}"]
+  }
+
+}
